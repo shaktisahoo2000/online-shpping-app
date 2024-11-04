@@ -13,7 +13,9 @@ public interface UserService {
 	public String register(User user) throws UserAlreadyExistsException;
 	public String login(User user) throws UserNotFound,PasswordMisMatchException;
 	public List<User> getAllUsers();
+	public String updateUser(User user, Long userId);
 	public String deleteUser(Long userId);
+	
 
 	
 }

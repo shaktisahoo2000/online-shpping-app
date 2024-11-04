@@ -31,6 +31,11 @@ public class GlobalExceptionHandler {
 		return new ErrorResponse(LocalDateTime.now(),HttpStatus.UNAUTHORIZED.value(),ex.getMessage());
 	}
 	
+	public @ResponseBody ErrorResponse handleException(EmailAlreadyExistsException ex) {
+		log.warn("EmailAlreadyExistsException Handler Working");
+		return new ErrorResponse(LocalDateTime.now(),HttpStatus.UNAUTHORIZED.value(),ex.getMessage());
+	}
+	
 	
 	
 	
